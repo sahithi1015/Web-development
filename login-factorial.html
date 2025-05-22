@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Factorial Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    form, .calculator {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Signup</h2>
+  <form id="signupForm">
+    <input type="text" id="signupUsername" placeholder="Username" required />
+    <input type="email" id="signupEmail" placeholder="Email" required />
+    <input type="password" id="signupPassword" placeholder="Password" required />
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required />
+    <input type="password" id="loginPassword" placeholder="Password" required />
+    <button type="submit">Log In</button>
+  </form>
+
+  <div class="calculator hidden" id="calculator">
+    <h2>Factorial Calculator</h2>
+    <input type="number" id="numberInput" min="0" placeholder="Enter a non-negative integer" required />
+    <button onclick="calculateIterative()">Calculate Iteratively</button>
+    <button onclick="calculateRecursive()">Calculate Recursively</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    let registeredUsers = [];
+
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("signupUsername").value;
+      const email = document.getElementById("signupEmail").value;
+      const password = document.getElementById("signupPassword").value;
+      registeredUsers.push({ username, email, password });
+      alert("Signup successful! Please log in.");
+      document.getElementById("signupForm").reset();
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      const user = registeredUsers.find(u => u.email === email && u.password === password);
+      if (user) {
+        alert("Login successful!");
+        document.getElementById("loginForm").classList.add("hidden");
+        document.getElementById("signupForm").classList.add("hidden");
+        document.getElementById("calculator").classList.remove("hidden");
+      } else {
+        alert("Invalid credentials");
+      }
+    });
+
+    function isValidInput(num) {
+      return Number.isInteger(num) && num >= 0;
+    }
+
+    function calculateIterative() {
+      const num = parseInt(document.getElementById("numberInput").value);
+      if (!isValidInput(num)) {
+        return alert("Please enter a non-negative integer");
+      }
+      let result = 1;
+      for (let i = 2; i <= num; i++) {
+        result *= i;
+      }
+      document.getElementById("output").innerText = `Iterative Result: ${result}`;
+    }
+
+    function calculateRecursive() {
+      const num = parseInt(document.getElementById("numberInput").value);
+      if (!isValidInput(num)) {
+        return alert("Please enter a non-negative integer");
+      }
+      function recursiveFactorial(n) {
+        return n <= 1 ? 1 : n * recursiveFactorial(n - 1);
+      }
+      const result = recursiveFactorial(num);
+      document.getElementById("output").innerText = `Recursive Result: ${result}`;
+    }
+  </script>
+</body>
+</html>
