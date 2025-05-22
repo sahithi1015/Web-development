@@ -1,0 +1,61 @@
+body {
+  font-family: 'Times New Roman', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f2f2f2;
+}
+h2 {
+  margin-bottom: 10px;
+}
+form, .calculator {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+input, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#signup-btn, #login-btn {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+#signup-btn:hover, #login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Calculator buttons */
+.calculator button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+.calculator button:hover {
+  background-color: #0056b3;
+}
+.output {
+  background: #eee;
+  padding: 15px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}

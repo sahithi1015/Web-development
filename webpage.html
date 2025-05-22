@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Factorial Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Signup Form -->
+  <form id="signupForm">
+    <h2>Signup</h2>
+    <input type="text" id="signupUsername" placeholder="Username" required />
+    <input type="email" id="signupEmail" placeholder="Email" required />
+    <input type="password" id="signupPassword" placeholder="Password" required />
+    <button id="signup-btn" type="submit">Sign Up</button>
+  </form>
+
+  <!-- Login Form -->
+  <form id="loginForm">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email" required />
+    <input type="password" id="loginPassword" placeholder="Password" required />
+    <button id="login-btn" type="submit">Log In</button>
+  </form>
+
+  <!-- Factorial Calculator -->
+  <div class="calculator hidden" id="calculator">
+    <h2>Factorial Calculator</h2>
+    <input type="number" id="numberInput" min="0" placeholder="Enter a non-negative integer" required />
+    <button onclick="calculateIterative()">Calculate Iteratively</button>
+    <button onclick="calculateRecursive()">Calculate Recursively</button>
+    <p class="output" id="output"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
