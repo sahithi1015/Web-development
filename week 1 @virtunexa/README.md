@@ -61,9 +61,13 @@ MIT License
 ## screenshots of webpage 
 # sign up and login in page
 
-![image](https://github.com/user-attachments/assets/f3b5cf04-87a8-463d-8ef7-096f91618df1)
+![image](https://github.com/user-attachments/assets/2df35c71-784b-4bfd-af07-919ffbf09d94)
+
 
 # factorial calculator
-![image](https://github.com/user-attachments/assets/eb64abf7-d534-4056-b919-21ca9be9234c)
-![image](https://github.com/user-attachments/assets/ed75a0ce-9e98-455b-88c1-dcdd155243b8)
+![image](https://github.com/user-attachments/assets/39912297-f5ad-46a9-b61a-28a3cbafb0fb)
+![image](https://github.com/user-attachments/assets/ebce5c6e-4bbf-45ad-9363-ce0f1104fafe)
+
+
+
 
