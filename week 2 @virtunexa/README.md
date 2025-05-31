@@ -20,7 +20,8 @@ A simple, uplifting single-page web application that displays a random daily aff
 ## 📸 Screenshots
 
 ### Main View (Desktop)
-![Main View]()
+
+![image](https://github.com/user-attachments/assets/859f7336-7c47-4e9c-bde9-fa0787f9f06b)
 
 
 
