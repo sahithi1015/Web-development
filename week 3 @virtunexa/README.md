@@ -11,7 +11,7 @@ A web-based tool designed to help students collaboratively plan study sessions, 
 - ✅ Input validation with user-friendly error messages  
 - 📋 Task list display with remove option  
 - 🎨 Clean, responsive UI using Tailwind CSS  
-- 🔔 Success alerts for user feedback  
+- 🔔 Success alerts for user   
 
 ---
 
@@ -20,7 +20,7 @@ A web-based tool designed to help students collaboratively plan study sessions, 
 | Layer        | Technology                  |
 |--------------|------------------------------|
 | Frontend     | HTML, CSS, JavaScript        |
-| UI Framework | Tailwind CSS (CDN)           |
+
 
 
 ---
@@ -40,6 +40,7 @@ study-session-planner/
 
 ## 📸 Screenshots
 
+![image](https://github.com/user-attachments/assets/c9b65431-54b6-4d41-a68b-ed24c25fd148)
 
 ---
 
