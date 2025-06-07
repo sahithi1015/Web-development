@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Session Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-blue-600 text-white p-4 text-center text-2xl font-bold">
+    Study Session Planner
+  </header>
+
+  <main class="p-4 max-w-3xl mx-auto">
+    <section class="bg-white p-4 rounded-lg shadow-md mb-6">
+      <h2 class="text-xl font-semibold mb-2">Create Task</h2>
+      <form id="taskForm" class="space-y-4">
+        <div>
+          <input type="text" id="taskName" placeholder="Task name" class="input" required />
+          <span id="taskNameError" class="error-msg hidden">Task name is required</span>
+        </div>
+
+        <div>
+          <input type="date" id="taskDeadline" class="input" required />
+          <span id="taskDeadlineError" class="error-msg hidden">Deadline must be today or later</span>
+        </div>
+
+        <div>
+          <input type="text" id="assignedTo" placeholder="Assigned to" class="input" required />
+          <span id="assignedToError" class="error-msg hidden">Assignee is required</span>
+        </div>
+
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+    </section>
+
+    <section class="bg-white p-4 rounded-lg shadow-md">
+      <h2 class="text-xl font-semibold mb-4">Task List</h2>
+      <ul id="taskList" class="space-y-3"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
